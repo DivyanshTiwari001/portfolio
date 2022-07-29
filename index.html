@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Divyansh Tiwari</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <style>
+        #photo{
+           text-align:center;
+           background-color:rgb(54, 52, 38);
+        }
+        #image1{
+            margin-top:10px;
+            width:150px;
+            height:auto;
+            border-radius:15px;
+        }
+        #intro{
+            margin-top:0;
+            color:rgb(208, 255, 0);
+            font-size: 25px;
+        }
+        #about,#content-about{
+          background-color:rgba(127, 144, 51, 0.529);
+          font-size: 25px;
+          text-align: center;
+        }
+        #projects,.dark{
+          margin-top:2px;
+          text-align: center;
+          background-color:rgba(127, 144, 51, 0.529);
+        }
+        .project-image{
+          width:40%;
+          height:auto;
+        }
+        button{
+          margin:5px;
+          width:85px;
+          font-size:25px;
+          border-radius: 20px;
+          background-color: rgb(0, 0, 0);
+        }
+        a{
+          text-decoration: none;
+          color:red;
+        }
+        #view:hover{
+          font-size: 30px;
+          color:white;
+          text-decoration:none;
+        }
+        .fa{
+          padding: 20px;
+          font-size: 30px;
+          width: 50px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+        }
+        .fa:hover{
+          font-size:40px;
+          width: 60px;
+          text-decoration: none;
+          color:white;
+        }
+        .fa-linkedin{
+         margin-left:25px;
+         background: #007bb5;
+         padding:10px;
+         color: white;
+        }
+        .fa-github{
+         margin-left:25px;
+         background: #0c0d0d;
+         padding:10px;
+         color: white;
+        }
+        .fa-google{
+         margin-left:25px;
+         background: #ed0f0f;
+         padding:10px;
+         color: white;
+        }
+    </style>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['C++', 80],
+          ['C', 95],
+          ['HTML', 95],
+          ['CSS',70],
+          ['Javascript',85],
+          ['Nodejs',85]
+        ]);
+
+        var options = {
+          width: 300 , height: 300,
+          greenFrom: 90, greenTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 10
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+      }
+    </script>
+</head>
+<body>
+    <div id="photo">
+    <img src="images/pic.jpeg" alt="image" id="image1">
+    <p id="intro">Hi, I Am Divyansh Tiwari</p>
+   <div id="nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#about">About Me </a>
+            <a class="nav-item nav-link" href="#skills">My Skills</a>
+            <a class="nav-item nav-link" href="#projects">My Projects</a>
+            <a class="nav-item nav-link" href="#contact">Contact Me</a>
+          </div>
+        </div>
+      </nav>
+   </div>
+  </div>
+   <div id="about">
+    <h2>About</h2>
+    <p id="content-about">Hello, I am Divyansh Tiwari pursuing Btech in Computer Science Engineering from Madan Mohan Malviya University of Technology,Gorakhpur.Currently I am a first year student. My area of interest are competetive programming and Mathematics.
+      Apart from this i have various other interests such as learning about new technologies and building softwares and web applications. In future, I want to be a Software Development Engineer.
+    </p>
+   </div>
+   <div id="skills" style="text-align: center;">
+    <h2>Current Skills</h2>
+    <div id="chart_div" style="width: 300px;;margin-left:auto;margin-right:auto"></div>
+  </div>
+   </div>
+   <div id="projects">
+    <h2 >Projects</h2>
+    <div class="dark">
+    <div id="project1" >
+      <h3>Employee Login In Page</h3>
+      <img src="images/project1.png" alt="image" class="project-image"><br>
+      <button ><a href="https://divyanshtiwari001.github.io/EmployeeLoginPortal/"  id="view">View</a></button>
+    </div>
+    <div id="project2">
+      <h3>Digital Clock</h3>
+      <img src="images/project2.png" alt="image" class="project-image"><br>
+      <button><a href="https://divyanshtiwari001.github.io/DigitalClock/"  id="view">View</a></button>
+    </div>
+    </div>
+  </div>
+  <div id="contact" style="text-align:center">
+    <h2 >Contact Me At:</h2>
+     <a href="https://github.com/DivyanshTiwari001" class="fa fa-github"></a>
+     <a href="https://www.linkedin.com/in/divyansh-tiwari-177723228/" class="fa fa-linkedin" ></a>
+     <a href="mailto:divyanshtiwari4237@gmail.com" class="fa fa-google" ></a>
+    
+  </div>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
